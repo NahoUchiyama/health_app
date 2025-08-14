@@ -6,7 +6,7 @@ services:
   # nginxというサービス
   nginx:
     # コンテナ名指定
-    container_name: curriculum-nginx
+    container_name: laravel-nginx
     # 使用イメージの指定
     image: nginx:latest
     # 同期ファイルの指定
@@ -21,7 +21,7 @@ services:
       - php
 
   php:
-    container_name: curriculum-laravel
+    container_name: laravel-laravel
     ###############################################################
     # Mac M1チップユーザーは以下のコメントアウトを解除して作業を進めてください
     # platform: linux/x86_64
@@ -43,7 +43,7 @@ services:
       - db
 
   db:
-    container_name: curriculum-db
+    container_name: laravel-db
     image: mysql:5.7
     # コンテナの環境変数を指定
     environment:
