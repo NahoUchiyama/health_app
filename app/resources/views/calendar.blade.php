@@ -6,7 +6,7 @@
     <h1 class="h4 mb-0">Stay Healthy</h1>
 
     <div class="d-flex align-items-center gap-3">
-      <span class="fw-bold">{{ Auth::user()->name }}</span>
+        <a href="{{ route('profile') }}" class="text-blue-500 hover:underline"><span class="fw-bold">{{ Auth::user()->name }}</span></a>
       <form method="POST" action="{{ route('logout') }}">
         @csrf
         <button type="submit" class="btn btn-outline-danger btn-sm">ログアウト</button>
